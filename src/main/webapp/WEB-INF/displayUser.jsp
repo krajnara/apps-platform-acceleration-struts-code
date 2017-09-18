@@ -1,5 +1,4 @@
 <!--
-
 Licensed to the Apache Software Foundation (ASF) under one or more
 contributor license agreements. See the NOTICE file distributed with
 this work for additional information regarding copyright ownership.
@@ -14,7 +13,21 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
-
 -->
-<%@ taglib prefix="s" uri="/struts-tags" %>
+<%@ taglib prefix="t" tagdir="/WEB-INF/tags" %>
+<jsp:useBean id="user" type="org.superbiz.struts.User" scope="request"/>
 
+<t:layout title="User Details">
+    <h2>User Details</h2>
+
+    <dl>
+        <dt>ID</dt>
+        <dd>${user.id}</dd>
+
+        <dt>First Name</dt>
+        <dd>${user.firstName}</dd>
+
+        <dt>Last Name</dt>
+        <dd>${user.lastName}</dd>
+    </dl>
+</t:layout>
